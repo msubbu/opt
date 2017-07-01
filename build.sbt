@@ -14,6 +14,4 @@ libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0"
 
 resolvers += "Oscar Releases" at "http://artifactory.info.ucl.ac.be/artifactory/libs-release/"
 
-//resolvers += Resolver.url("Oscar Releases", url("http://artifactory.info.ucl.ac.be/artifactory/libs-release/"))
-
 libraryDependencies += "oscar" % "oscar-cp_2.11" % "3.1.0" withSources()

@@ -84,10 +84,11 @@ object ZeroOneKnapsack extends LazyLogging {
       val thisEstimate = estimate(select, values, weights, remainingRoom)
       val obj = getObj(values, select)
 
-      if(obj > bestObj && remainingRoom >= 0) {
+      if(obj > (bestObj) && remainingRoom >= 0) {
         bestObj = obj
 
-        logger.debug("Selection Vector: "+(select map (x => x.toInt)))
+        logger.debug("Initial Estimate: "+initialEstimate)
+        logger.debug("Selection Vector: "+((select ++ Vector.fill(values.length - select.length)(0.0)) map (x => x.toInt)))
         logger.debug("Estimate at this node: " + thisEstimate)
         logger.debug("Objective at this node: " + obj.toLong)
         logger.debug("Best objective so far: " + bestObj.toLong)
