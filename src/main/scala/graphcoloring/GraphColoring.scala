@@ -100,7 +100,7 @@ object GraphColoring extends CPModel with App {
 
       // assume the worst
       // TODO: Optimize to find the chromatic number
-      val chromaticNumber: Int = maxDegree
+      val chromaticNumber: Int = 16
 
 
         println("Trying # colors: " + chromaticNumber)
